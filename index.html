@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patricia Whit | Digital Growth Expert</title>
-        <link rel="icon" href="Patricia.png" type="image/x-icon">
+    <link rel="icon" href="Patricia.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -718,7 +718,7 @@
         }
         
         .portfolio-image {
-            height: 200px;
+            height: 250px;
             background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
             display: flex;
             align-items: center;
@@ -733,6 +733,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.05);
         }
         
         .portfolio-image:before {
@@ -753,6 +758,33 @@
         
         .portfolio-content {
             padding: 1.5rem;
+        }
+        
+        /* Case Study Results */
+        .case-study-results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-radius: 10px;
+        }
+        
+        .result-item {
+            text-align: center;
+        }
+        
+        .result-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--gray);
         }
         
         /* Testimonials */
@@ -782,7 +814,7 @@
         
         .testimonial-card:before {
             content: """;
-            position absolute;
+            position: absolute;
             top: 20px;
             left: 20px;
             font-size: 4rem;
@@ -965,7 +997,7 @@
             font-size: 0.9rem;
         }
         
-        /* Service Pages Modal */
+        /* Service Pages Modal - Updated */
         .service-modal {
             display: none;
             position: fixed;
@@ -1038,11 +1070,16 @@
             margin-top: 0.25rem;
         }
         
-        .service-pricing {
+        .service-portfolio-showcase {
             background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
             padding: 2rem;
             border-radius: 15px;
             margin: 2rem 0;
+        }
+        
+        .service-portfolio-showcase h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
         
         .service-cta {
@@ -1126,6 +1163,10 @@
                 padding: 20px;
                 margin: 10% auto;
             }
+            
+            .case-study-results {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1187,12 +1228,153 @@
                     <p>I help businesses, creators, and authors build powerful online assets, set up professional systems, and create high converting digital strategies that drive real results.</p>
                     <div class="hero-buttons">
                         <a href="https://www.fiverr.com/patricia_whit" class="btn btn-primary">Start Your Project</a>
-                        <a href="#services" class="btn btn-secondary">Explore Services</a>
+                        <a href="#portfolio" class="btn btn-secondary">See My Work</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="hero-image-placeholder">
                         <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Digital Marketing Expert">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section (Moved to top for emphasis) -->
+    <section class="portfolio" id="portfolio">
+        <div class="floating-elements">
+            <div class="floating-element" style="width: 80px; height: 80px; top: 10%; left: 10%;"></div>
+            <div class="floating-element" style="width: 120px; height: 120px; top: 70%; left: 80%;"></div>
+        </div>
+        <div class="container">
+            <h2>My Recent Work</h2>
+            <p class="section-subtitle">Real projects, real results. Here are some of my recent success stories with measurable outcomes.</p>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="Ecommerce Store Transformation.png" alt="Ecommerce Store Transformation">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Ecommerce Store Transformation</h3>
+                        <p>Complete Shopify redesign with optimized product pages, checkout flow, and mobile responsiveness.</p>
+                        
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">45%</span>
+                                <span class="result-label">Conversion Rate Increase</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">60%</span>
+                                <span class="result-label">Higher Average Order Value</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">72hr</span>
+                                <span class="result-label">Project Completion</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">100%</span>
+                                <span class="result-label">Client Satisfaction</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-service" data-service="website-development">See Full Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="Social Media System Overhaul.png" alt="Social Media System Overhaul">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Social Media System Overhaul</h3>
+                        <p>Complete Instagram and Facebook setup with growth strategy and content calendar implementation.</p>
+                        
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">2x</span>
+                                <span class="result-label">Followers Growth</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">300%</span>
+                                <span class="result-label">Engagement Increase</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">48hr</span>
+                                <span class="result-label">Setup Completion</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">500+</span>
+                                <span class="result-label">New Leads</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-service" data-service="social-media">See Full Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="Author Book Launch Campaign.png" alt="Author Book Launch Campaign">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Author Book Launch Campaign</h3>
+                        <p>Comprehensive book promotion with AI-powered trailers, 3D mockups, and strategic review placement.</p>
+                        
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">300%</span>
+                                <span class="result-label">Pre-orders Increase</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">40%</span>
+                                <span class="result-label">Sales Above Target</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">1 Week</span>
+                                <span class="result-label">Bestseller Status</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">50+</span>
+                                <span class="result-label">Professional Reviews</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-service" data-service="book-promotion">See Full Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="Brand Identity Creation.png" alt="Brand Identity Creation">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Brand Identity Creation</h3>
+                        <p>Complete visual rebrand with 3D logo design, social media assets, and brand guidelines.</p>
+                        
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">3D</span>
+                                <span class="result-label">Logo Design</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">24hr</span>
+                                <span class="result-label">Delivery Time</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">15+</span>
+                                <span class="result-label">Brand Assets</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">100%</span>
+                                <span class="result-label">Client Approval</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-service" data-service="graphic-design">See Full Case Study</a>
                     </div>
                 </div>
             </div>
@@ -1245,7 +1427,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#services" class="btn btn-service">View All Services</a>
+                    <a href="#portfolio" class="btn btn-service">See My Portfolio</a>
                 </div>
             </div>
         </div>
@@ -1274,7 +1456,7 @@
                         <li>Product page optimization</li>
                         <li>Sales funnel structure</li>
                     </ul>
-                    <a href="#" class="btn btn-service" data-service="website-development">Learn More</a>
+                    <a href="#" class="btn btn-service" data-service="website-development">See Examples</a>
                 </div>
                 
                 <!-- Service 2 -->
@@ -1290,7 +1472,7 @@
                         <li>Social media bio optimization</li>
                         <li>Professional social media branding</li>
                     </ul>
-                    <a href="#" class="btn btn-service" data-service="social-media">Learn More</a>
+                    <a href="#" class="btn btn-service" data-service="social-media">See Examples</a>
                 </div>
                 
                 <!-- Service 3 -->
@@ -1306,7 +1488,7 @@
                         <li>Platform specific post captions</li>
                         <li>Audience engagement strategy</li>
                     </ul>
-                    <a href="#" class="btn btn-service" data-service="content-strategy">Learn More</a>
+                    <a href="#" class="btn btn-service" data-service="content-strategy">See Examples</a>
                 </div>
                 
                 <!-- Service 4 -->
@@ -1322,7 +1504,7 @@
                         <li>Professional gig style images for platforms</li>
                         <li>Visual branding for social media</li>
                     </ul>
-                    <a href="#" class="btn btn-service" data-service="graphic-design">Learn More</a>
+                    <a href="#" class="btn btn-service" data-service="graphic-design">See Examples</a>
                 </div>
                 
                 <!-- Service 5 -->
@@ -1337,7 +1519,7 @@
                         <li>AI powered book trailers for video platforms</li>
                         <li>3D and realistic book mockups for marketing and ads</li>
                     </ul>
-                    <a href="#" class="btn btn-service" data-service="book-promotion">Learn More</a>
+                    <a href="#" class="btn btn-service" data-service="book-promotion">See Examples</a>
                 </div>
             </div>
         </div>
@@ -1354,122 +1536,11 @@
                 <div class="fiverr-logo">
                     <i class="fab fa-fiverr"></i>
                 </div>
-                <div><img src="Patricia.png" alt="" srcset=""></div>
                 <h2>Hire Me on Fiverr</h2>
                 <p class="section-subtitle">Get professional digital services with fast delivery and excellent quality. Check out my Fiverr profile for detailed service packages and client reviews.</p>
                 <a href="https://www.fiverr.com/patricia_whit" target="_blank" class="btn btn-fiverr">
                     <i class="fab fa-fiverr"></i> View My Fiverr Profile
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Services Section -->
-    <section class="featured-services">
-        <div class="floating-elements">
-            <div class="floating-element" style="width: 90px; height: 90px; top: 20%; left: 5%;"></div>
-            <div class="floating-element" style="width: 70px; height: 70px; top: 60%; left: 90%;"></div>
-        </div>
-        <div class="container">
-            <h2>Why Choose My Services</h2>
-            <p class="section-subtitle">I combine strategic thinking with flawless execution to deliver digital solutions that drive measurable results for your business.</p>
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Fast Execution</h3>
-                    <p>Quick project turnaround without compromising on quality or attention to detail.</p>
-                    <a href="#contact" class="btn btn-service" style="margin-top: 1rem;">Get Started</a>
-                </div>
-                
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h3>Professional Quality</h3>
-                    <p>Premium results that reflect your brand's value and position you as an industry leader.</p>
-                    <a href="#portfolio" class="btn btn-service" style="margin-top: 1rem;">See Portfolio</a>
-                </div>
-                
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Results Driven</h3>
-                    <p>Every strategy is designed with measurable outcomes and conversion optimization in mind.</p>
-                    <a href="#testimonials" class="btn btn-service" style="margin-top: 1rem;">Client Stories</a>
-                </div>
-                
-                <div class="featured-card">
-                    <div class="featured-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Reliable Partnership</h3>
-                    <p>Long-term collaboration focused on your sustained growth and digital success.</p>
-                    <a href="#about" class="btn btn-service" style="margin-top: 1rem;">About Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="floating-elements">
-            <div class="floating-element" style="width: 80px; height: 80px; top: 10%; left: 10%;"></div>
-            <div class="floating-element" style="width: 120px; height: 120px; top: 70%; left: 80%;"></div>
-        </div>
-        <div class="container">
-            <h2>Recent Success Stories</h2>
-            <p class="section-subtitle">Explore examples of how I've helped businesses and creators achieve their digital goals through strategic implementation.</p>
-            <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="Ecommerce Store Transformation.png" alt="Ecommerce Store">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Ecommerce Store Transformation</h3>
-                        <p>Complete Shopify redesign resulting in 45% increase in conversion rate and 60% higher average order value.</p>
-                        <a href="#" class="btn btn-service" data-service="website-development">View Case Study</a>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="Social Media System Overhaul.png" alt="Social Media Growth">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Social Media System Overhaul</h3>
-                        <p>Instagram and Facebook setup with growth strategy that doubled followers in 3 months.</p>
-                        <a href="#" class="btn btn-service" data-service="social-media">View Case Study</a>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="Author Book Launch Campaign.png" alt="Book Promotion">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Author Book Launch Campaign</h3>
-                        <p>Comprehensive book promotion including trailers, mockups, and reviews that boosted pre-orders by 300%.</p>
-                        <a href="#" class="btn btn-service" data-service="book-promotion">View Case Study</a>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 4 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="Brand Identity Creation.png" alt="Brand Identity">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Brand Identity Creation</h3>
-                        <p>Complete visual rebrand with 3D logo and social media assets that elevated brand perception.</p>
-                        <a href="#" class="btn btn-service" data-service="graphic-design">View Case Study</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1505,7 +1576,7 @@
                             <p>Founder, Lifestyle Brand</p>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-service" style="margin-top: 1rem;">Start Your Project</a>
+                    <a href="https://www.fiverr.com/patricia_whit" class="btn btn-service" style="margin-top: 1rem;">Hire Me Now</a>
                 </div>
                 
                 <!-- Testimonial 2 -->
@@ -1522,14 +1593,14 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            
+                            MT
                         </div>
                         <div class="author-info">
                             <h4>Michael Torres</h4>
                             <p>Content Creator</p>
                         </div>
                     </div>
-                    <a href="#services" class="btn btn-service" style="margin-top: 1rem;">Explore Services</a>
+                    <a href="#portfolio" class="btn btn-service" style="margin-top: 1rem;">See My Work</a>
                 </div>
                 
                 <!-- Testimonial 3 -->
@@ -1570,7 +1641,7 @@
                 <h2>Let's Build Your Digital Success Together</h2>
                 <p>Start your project today with a trusted digital expert who understands growth, systems, and conversions.</p>
                 <a href="https://www.fiverr.com/patricia_whit" class="btn btn-accent">Start Your Project Now</a>
-                <a href="#home" class="btn btn-secondary" style="margin-left: 1rem;">View Services</a>
+                <a href="#portfolio" class="btn btn-secondary" style="margin-left: 1rem;">See My Portfolio</a>
             </div>
         </div>
     </section>
@@ -1610,9 +1681,9 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#fiverr">Fiverr</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
@@ -1632,7 +1703,7 @@
         </div>
     </footer>
 
-    <!-- Service Detail Modals -->
+    <!-- Updated Service Detail Modals with Portfolio Focus -->
     <div id="website-development-modal" class="service-modal">
         <div class="service-modal-content">
             <span class="close-modal">&times;</span>
@@ -1677,18 +1748,31 @@
                 </div>
             </div>
             
-            <div class="service-pricing">
-                <h3>Package Options</h3>
-                <ul>
-                    <li><strong>Basic Store Setup:</strong> $299 - Perfect for new businesses</li>
-                    <li><strong>Professional Ecommerce:</strong> $599 - Complete store with optimization</li>
-                    <li><strong>Enterprise Solution:</strong> $999 - Advanced features and integrations</li>
-                </ul>
+            <div class="service-portfolio-showcase">
+                <h3>Recent Ecommerce Projects</h3>
+                <div class="case-study-results">
+                    <div class="result-item">
+                        <span class="result-number">45%</span>
+                        <span class="result-label">Conversion Increase</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">60%</span>
+                        <span class="result-label">Higher AOV</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">72hr</span>
+                        <span class="result-label">Delivery</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">50+</span>
+                        <span class="result-label">Stores Built</span>
+                    </div>
+                </div>
             </div>
             
             <div class="service-cta">
-                <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                <a href="https://www.fiverr.com/patricia_whit" class="btn btn-secondary" style="margin-left: 1rem;">Hire on Fiverr</a>
+                <a href="https://www.fiverr.com/patricia_whit" class="btn btn-primary">Hire Me on Fiverr</a>
+                <a href="#portfolio" class="btn btn-secondary" style="margin-left: 1rem;">See More Examples</a>
             </div>
         </div>
     </div>
@@ -1738,18 +1822,31 @@
                 </div>
             </div>
             
-            <div class="service-pricing">
-                <h3>Package Options</h3>
-                <ul>
-                    <li><strong>Basic Setup:</strong> $70 - Two platform setup</li>
-                    <li><strong>Complete Setup:</strong> $150 - All major platforms</li>
-                    <li><strong>Ongoing Management:</strong> $300/month - Full management</li>
-                </ul>
+            <div class="service-portfolio-showcase">
+                <h3>Recent Social Media Success</h3>
+                <div class="case-study-results">
+                    <div class="result-item">
+                        <span class="result-number">2x</span>
+                        <span class="result-label">Follower Growth</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">300%</span>
+                        <span class="result-label">Engagement Increase</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">48hr</span>
+                        <span class="result-label">Setup Time</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">100+</span>
+                        <span class="result-label">Accounts Setup</span>
+                    </div>
+                </div>
             </div>
             
             <div class="service-cta">
-                <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                <a href="https://www.fiverr.com/patricia_whit" class="btn btn-secondary" style="margin-left: 1rem;">Hire on Fiverr</a>
+                <a href="https://www.fiverr.com/patricia_whit" class="btn btn-primary">Hire Me on Fiverr</a>
+                <a href="#portfolio" class="btn btn-secondary" style="margin-left: 1rem;">See More Examples</a>
             </div>
         </div>
     </div>
